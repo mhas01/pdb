@@ -1,2 +1,2 @@
 # pdb
-POC for Puppet
+POC for Puppet on Docker (R) Containers.
