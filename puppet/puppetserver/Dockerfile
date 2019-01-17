@@ -1,7 +1,8 @@
 FROM ubuntu:latest
-EXPOSE 80
+#EXPOSE 80
+#EXPOSE 22
 EXPOSE 8140
-EXPOSE 22
+
 RUN apt-get update -y 
 RUN apt-get install -y apt-utils nginx  openssh-server curl
 #RUN service nginx start
@@ -16,4 +17,6 @@ RUN apt-get update
 RUN apt-get install -y puppetserver
 RUN apt-get update
 #RUN puppet resource package puppetmaster ensure=latest
+
+RUN /opt/puppetlabs/puppet/bin/puppet module install puppetlabs-puppetdb --version 7.1.0
 RUN service puppetserver start

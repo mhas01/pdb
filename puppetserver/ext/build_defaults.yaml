@@ -1,0 +1,6 @@
+---
+project: 'puppetserver'
+
+repo_name: 'puppet6'
+nonfinal_repo_name: 'puppet6-nightly'
+repo_link_target: 'puppet'
