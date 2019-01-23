@@ -49,7 +49,7 @@ LABEL org.label-schema.maintainer="Puppet Release Team <release@puppet.com>" \
 
 RUN apt-get update && \
     
-    apt-get install -y --no-install-recommends wget=1.17.1-1ubuntu1 ca-certificates && \
+    apt-get install -y --no-install-recommends wget=1.17.1-1ubuntu1 ca-certificates openssh-server && \
     
     wget https://apt.puppetlabs.com/puppet6-release-"$UBUNTU_CODENAME".deb && \
     
@@ -113,3 +113,4 @@ HEALTHCHECK --interval=10s --timeout=10s --retries=90 CMD ["/healthcheck.sh"]
 
 
 COPY Dockerfile /
+
