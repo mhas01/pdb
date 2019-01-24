@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 EXPOSE 8081
+EXPOSE 8080
 EXPOSE 22
 RUN apt-get update -y 
 RUN apt-get install -y curl
