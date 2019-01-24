@@ -108,7 +108,7 @@ COPY healthcheck.sh /
 
 RUN chmod +x /healthcheck.sh
 
-RUN /opt/puppetlabs/puppet/bin/puppet module install puppetlabs-puppetdb --version 7.1.0
+RUN /opt/puppetlabs/puppet/bin/puppet module install puppetlabs-puppetdb --version 7.1.0 --environment=puppetdb
 HEALTHCHECK --interval=10s --timeout=10s --retries=90 CMD ["/healthcheck.sh"]
 
 
